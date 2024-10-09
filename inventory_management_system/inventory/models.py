@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class InventoryItem(models.Model):
-    name = models.Charfield(max_length=200, unique=True, null=True, blank=True)
+    name = models.CharField(max_length=200, unique=True, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     quantity = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
